@@ -1,0 +1,30 @@
+/* start: Hero */
+.hero-section {
+    padding: 48px 0;
+}
+.hero-wrapper {
+    max-width: 720px;
+}
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+.hero-description {
+    color: var(--slate-600);
+    line-height: 1.5;
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+/* end: Hero */
+
+
+
+/* start: Breakpoints */
+@media screen and (max-width: 767px) {
+    .hero-title {
+        font-size: 32px;
+    }
+}
+/* end: Breakpoints */
