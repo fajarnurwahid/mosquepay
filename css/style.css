@@ -483,6 +483,9 @@ nav.scrolled {
 .navbar-menu-right {
     margin-left: auto;
 }
+.navbar-menu-right > * {
+    margin-left: 12px;
+}
 .navbar-toggle {
     font-size: 24px;
     font-weight: 500;
@@ -619,8 +622,12 @@ footer {
     .navbar-menu-right {
         padding: 16px;
     }
-    .navbar-menu-right > .btn {
-        justify-content: center;
+    .navbar-menu-right > * {
+        justify-content: center !important;
+        margin-left: unset;
+    }
+    .navbar-menu-right > :not(:last-child) {
+        margin-bottom: 12px;
     }
     .navbar-submenu {
         position: static;
