@@ -1,0 +1,204 @@
+/* start: Hero */
+header {
+    padding: 16px 0;
+}
+.hero-wrapper {
+    background-image: linear-gradient(to right, var(--blue-900) 50%, transparent), url(../images/mosque.jpg);
+    background-position: right center;
+    background-size: cover, 50% 100%;
+    background-repeat: no-repeat;
+    padding: 48px;
+    border-radius: 8px;
+}
+.hero-wrapper > * {
+    max-width: 720px;
+}
+.hero-title {
+    color: var(--white);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+.hero-description {
+    font-size: 18px;
+    color: var(--white);
+    opacity: .75;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+/* end: Hero */
+
+
+
+/* start: Features */
+.feature-section {
+    padding: 48px 0;
+}
+.feature-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+    row-gap: 32px;
+}
+.feature-wrapper:not(:last-child) {
+    margin-bottom: 48px;
+}
+.feature-section .section-title {
+    margin-bottom: 16px;
+}
+.feature-description {
+    margin-bottom: 16px;
+    font-size: 17px;
+    color: var(--slate-600);
+    line-height: 1.5;
+}
+.feature-link {
+    text-decoration: none;
+    color: var(--blue-600);
+    font-weight: 600;
+}
+.feature-link:hover {
+    color: var(--blue-800);
+}
+.feature-image {
+    width: 100%;
+    height: 400px;
+    object-position: left center;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .1);
+    border: 1px solid var(--slate-100);
+}
+/* end: Features */
+
+
+
+/* start: News */
+.news-section {
+    padding: 48px 0;
+}
+.news-section .section-title {
+    margin-bottom: 8px;
+}
+.news-description {
+    font-size: 17px;
+    color: var(--slate-600);
+    line-height: 1.5;
+}
+.news-wrapper {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+}
+.news-item {
+    display: flex;
+    margin-bottom: 24px;
+}
+.news-item-main {
+    display: block;
+}
+.news-item-image {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    margin-right: 16px;
+}
+.news-item-main .news-item-image {
+    width: 100%;
+    height: 400px;
+    margin-right: 0;
+    margin-bottom: 16px;
+}
+.news-item-date {
+    display: block;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--blue-600);
+    margin-bottom: 8px;
+}
+.news-item-title {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.3;
+}
+.news-item-description {
+    font-size: 14px;
+    color: var(--slate-600);
+    margin-top: 8px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+.news-item-read {
+    color: var(--slate-600);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+}
+.news-item-read:hover {
+    text-decoration: underline;
+    color: var(--slate-800);
+}
+/* end: News */
+
+
+
+/* start: Breakpoints */
+@media screen and (max-width: 991px) {
+    .hero-wrapper {
+        background-size: cover, 60% 100%;
+    }
+
+    .news-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .news-item-main {
+        display: flex;
+    }
+    .news-item-main .news-item-image {
+        width: 200px;
+        height: 140px;
+        margin-bottom: 0;
+        margin-right: 16px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .hero-title {
+        font-size: 28px;
+    }
+    .hero-wrapper {
+        padding: 32px;
+        background-image: unset;
+        background-color: var(--blue-900);
+    }
+
+    .feature-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .feature-wrapper-reverse > :first-child {
+        order: 2;
+    }
+    .feature-wrapper-reverse > :last-child {
+        order: 1;
+    }
+}
+@media screen and (max-width: 575px) {
+    .news-item {
+        display: block;
+        margin-bottom: 32px;
+    }
+    .news-item-main .news-item-image,
+    .news-item-image {
+        width: 100%;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+}
+/* end: Breakpoints */
